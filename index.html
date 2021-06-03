@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/32ed4ef74b.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css"> -->
+    <title>Document</title>
+    <!-- <script defer src="/your-path-to-fontawesome/js/brands.js"></script>
+    <script defer src="/your-path-to-fontawesome/js/solid.js"></script>
+    <script defer src="/your-path-to-fontawesome/js/fontawesome.js"></script> -->
+</head>
+<body>
+    
+    <div class="main center">
+        <div class="box center">
+            <img src="imagem/perfil.jpg" alt="">
+            <div>
+                <p class="user_name">Eve Santos</p>
+                <p class="Skill">Desenvolvedor Front-end</p>
+            </div>
+            <div class="arr_container center">
+                <i class="fas fa-arrow-right"></i>
+            </div>
+            <div class="left_container off">
+                <p>Skills</p>
+                <div class="skills">
+                    <div>HTML</div>
+                    <div>CSS</div>
+                    <div>JAVASCRIPT</div>
+                    <div>REACT</div>
+                </div>
+                <div class="icons">
+                    <i class="fab fa-github"></i>
+                    <i class="fab fa-linkedin"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-facebook"></i>
+                </div>
+                <div class="cancel center">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const clc = document.querySelector(".cancel");
+    const arr = document.querySelector(".arr_container");
+    const left_container = document.querySelector(".left_container");
+    
+    arr.addEventListener("click", ()=>{
+        arr.classList.add("active_arr");
+        if(left_container.classList.contains("off")){
+            left_container.classList.remove("off");
+            left_container.classList.add("active");
+    
+        }
+    });
+    clc.addEventListener("click", ()=>{
+        arr.classList.remove("active_arr");
+        if(left_container.classList.contains("active")){
+            left_container.classList.remove("active");
+            left_container.classList.add("off");
+        }
+    });
+    </script>
+    
+</body>
+</html>
